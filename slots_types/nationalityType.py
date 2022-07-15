@@ -5,19 +5,21 @@ import json
 client = boto3.client('lexv2-models')
 
 response = client.create_slot_type(
-    slotTypeName='Students',
-    description='A slot for students intended for use with the LexWithBoto3 bot',
+    slotTypeName='Nationality',
+    description='Slot for bootcamp type',
     slotTypeValues=[
         {
             'sampleValue': {
-                'value': 'Students'
+                'value': 'Nationality',
             },
         },
     ],
     valueSelectionSetting={
         'resolutionStrategy': 'OriginalValue',
     },
-    botId='UYDAFVYMVQ',
+    botId='C8RQQDJY6Y',
     botVersion='DRAFT',
     localeId='en_US',
 )
+
+print(response)
