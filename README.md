@@ -38,5 +38,24 @@ $python3 welcomeslot.py
 $python3 bootcampslot.py
 $python3 nationalityslot.py
 
+# Last Update:
+
+You will need to switch to datafromenvironment branch, then:
+
+run with python3 command on the terminal:
+
+1) createBot.py
+2) createBotLocale.py
+3) createBotVersion.py
+4) createIntentWelcome.py
+5) createSlotWelcome.py
+6) createIntentQuery.py
+7) createSlotTypeBootcamp.py
+8) createSlotTypeNationality.py
+9) createSlotBootcamp.py
+10) createSlotNationality.py
+
+Now every python module will create the corrsponding keys on config.json file
+
 
 
