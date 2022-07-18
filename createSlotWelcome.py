@@ -1,15 +1,14 @@
 import boto3
 import json
 
-
 client = boto3.client('lexv2-models')
 
-with open('../botCreation/querybot/config.json', 'r') as f:
+with open('config.json', 'r') as f:
     botIdData = json.load(f)['botId']
     f.close()
 
-with open('../intents/config.json', 'r') as f:
-    intentIdData = json.load(f)['welcomeIntentId']
+with open('config.json', 'r') as f:
+    welcomeIntentId = json.load(f)['welcomeIntentId']
     f.close()
 
 response = client.create_slot(
@@ -37,5 +36,5 @@ response = client.create_slot(
     botId=botIdData,
     botVersion='DRAFT',
     localeId='en_US',
-    intentId=intentIdData,
+    intentId=welcomeIntentId,
 )

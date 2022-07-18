@@ -4,7 +4,7 @@ import json
 
 client = boto3.client('lexv2-models')
 
-with open('../botCreation/querybot/config.json', 'r') as f:
+with open('config.json', 'r') as f:
     botIdData = json.load(f)['botId']
     f.close()
 
@@ -44,7 +44,11 @@ response = client.create_intent(
     botVersion='DRAFT',
     localeId='en_US',
 )
-intentData = response.get('intentId')
-#create a json file with the intentId:
+
+
+intentId  = response.get('intentId')
+
+#add intentId key inside the curly braces of the botIdData:
 with open('config.json', 'w') as f:
-    json.dump({"welcomeIntentId": intentData}, f, indent=4)
+    json.dump({"botId": botIdData, "welcomeIntentId": intentId}, f, indent=4)
+    f.close()
