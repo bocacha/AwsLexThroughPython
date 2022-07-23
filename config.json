@@ -1,6 +1,8 @@
 {
-    "botId": "25OYLQVXHS",
-    "welcomeIntentId": "0OUJWJ3SBS",
-    "queryIntentId": "7N50HGNXIH",
-    "nationalitySlotTypeId": "HPRMYPCSAZ"
+    "botId": "MLTUP9GOMR",
+    "welcomeIntentId": "ISMPP22XYN",
+    "firstQueryIntentId": "NTDJPV9VS8",
+    "slotTypeBootcampId": "D1PPRCRVM3",
+    "slotTypeProgramId": "XQHUD4YEJR",
+    "slotTypeCalificationId": "A1MIMGRKTA"
 }

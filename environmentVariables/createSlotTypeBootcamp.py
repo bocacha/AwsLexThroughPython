@@ -40,6 +40,13 @@ response = client.create_slot_type(
 slotTypeId = response['slotTypeId']
 
 with open('config.json', 'w') as f:
-    json.dump({"botId": botIdData, "welcomeIntentId": welcomeIntentId,"queryIntentId":queryIntentId,"slotTypeId":slotTypeId}, f, indent=4)
+    json.dump(
+        {
+        "botId": botIdData, 
+        "welcomeIntentId": welcomeIntentId,
+        "queryIntentId":queryIntentId,
+        "slotTypeId":slotTypeId
+        }, f, indent=4
+    )
     f.close()
 
